@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.app{
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(rgb(170, 247, 240),white);
+}
+
+/* header component */
+.navbar{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+    color: rgb(0, 0, 0);
+  }
+
+  p:hover{
+    transform: scale(1.08);
+  }
+
+  .options{
+    display: flex;
+    gap: 20px;
+  }
+
+  .option{
+    color: black;
+    transition: all 0.4s ease-in-out;
+    font-size: 18px;
+  }
+
+  .option:hover{
+    transform: scale(1.05);
+  }
+
+  .log-out-button{
+    padding: 10px;
+    background: RED;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .log-out-button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background: rgb(172, 165, 165);
+    color: red;
+  }
+
+
+}
+
+/* home */
+.hero{
+  max-width: 600px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.hero h1{
+  font-size: max(4vw, 36px);
+  color: black;
+}
+
+.hero p{
+  width: 75%;
+  color: black;
+  line-height: 1.5;
+}
+
+.hero form{
+  padding: 8px;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero form input{
+  flex: 1;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+}
+
+.hero form button{
+  border: none;
+  background: rgb(64, 238, 64);
+  color: white;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Home-list{
+  color: black;
+  text-align: center;
+
+  .home-empty{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 18px;
+  }
+
+  button{
+    background: rgb(64, 238, 64);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    transition: all 0.4s ease-in-out;
+    margin: 18px;
+  }
+
+  button:hover{
+    color: rgb(64, 238, 64);
+    background: white;
+    cursor: pointer;
+    transform: scale(1.09);
+  }
+}
+
+/* footer -component */
+.footer-container{
+  background: black;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  right: 0;
+
+  .footer-text{
+    color: white;
+    text-align: center;
+    font-size: max(20px,60%);
+  }
+
+  img{
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.4s ease-in-out ;
+  }
+
+  img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .footer-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+/* spinner */
+.spinner{
+  display: grid;
+  place-self: center;
+  min-height: 80vh;
+}
+
+.spin{
+  width: 65px;
+  height: 65px;
+  place-self: center;
+  border: 5px solid transparent;
+  border-top-color: black;
+  border-radius: 50%;
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate{
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+/* add item */
+.add-form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 0.25px solid rgb(177, 173, 173);
+    max-width: 80%;
+    padding: 100px;
+    border-radius: 20px;
+  }
+}
+
+.add-input{
+  display: flex;
+  gap: 20px;
+
+  label{
+    font-size: 2rem;
+    color: black;
+  }
+
+  input{
+    font-size: 15px;
+    border: none;
+    padding: 5px;
+  }
+
+  .add-ingre{
+    background-color: rgb(110, 248, 110);
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .add-ingre{
+    transform: scale(1.05);
+    color: white;
+    background-color:  rgb(0, 248, 0);
+    cursor: pointer;
+  }
+} 
+
+.adding-recipe{
+  font-size: 25px;
+  padding: 15px;
+  margin: 20px;
+  background-color: red;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 0.75px solid grey;
+  color: aliceblue;
+  transition: all 0.4s ease-in;
+}
+
+.adding-recipe:hover{
+  transform: scale(1.1);
+  color: black;
+  background-color: rgb(228, 228, 65);
+  cursor: pointer;
+}
+
+.add-delete{
+  background-color: rgb(247, 48, 48);
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 0.1px solid gray;
+  transition: all 0.4s ease-in-out;
+  margin: 10px;
+}
+.add-delete:hover{
+  transform: scale(1.05);
+  color: aliceblue;
+  background-color:  rgb(247, 6, 6);
+  cursor: pointer;
+}
+
+.ingre{
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ingreList{
+  display: flex;
+  flex-direction: column;
+
+  ol{
+    list-style: number;
+  }
+}
+
+/* login and register page */
+
+.login-contanier{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+
+  form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    input{
+      padding: 5px;
+      font-size: 20px;
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+
+    input:focus{
+      border: none;
+      outline: 1px solid orange;
+    }
+
+    button{
+      background: purple;
+      border: none;
+      padding: 5px;
+      font-size: 20px;
+      border-radius: 5px;
+      color: white;
+      transition: all 0.4s ease-in-out;
+      width: 100%;
+    }
+
+    button:hover{
+      transform: scale(1.05);
+      cursor: pointer;
+      color: aliceblue;
+    }
+
+    a{
+      div{
+        color: black;
+      }
+
+      div:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 300px;
+  background: white;
+
+  h3{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
+    font-size: 40px;
+  }
+
+  ol{
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  li{
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  ul{
+    display: flex;
+    list-style: none;
+    margin-left: 20px;
+  }
+}
